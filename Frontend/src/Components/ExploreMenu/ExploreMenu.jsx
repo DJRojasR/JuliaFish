@@ -13,7 +13,7 @@ const ExploreMenu = ({ category, setCategory }) => {
         {/* Iteracion sobre la lista de menus */}
         {menu_list.map((item, index) => (
           <div 
-            // Cambiar la categoria al hacer click
+            // Cambiar la categoria al hacer click de acuerdo al menu seleccionado
             onClick={() => setCategory(category === item.menu_name ? "All" : item.menu_name)} className="explore-menu-item" key={index}
           >
             {/* Cambiar la clase activa */}
