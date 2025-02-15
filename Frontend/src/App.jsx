@@ -7,7 +7,7 @@ import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 
 const App = () => {
   return (
-    //Creamos un div con la clase app y Agregamos el componente Navabar
+    //Creamos un div con la clase app y Agregamos el componente Navabar y las rutas
     <div className='app'>
       <Navabar/>
       <Routes>
