@@ -1,60 +1,71 @@
 .explore-menu{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: flex;/* Flexbox */
+    flex-direction: column;/* Columna */
+    gap: 20px;/* Espacio entre elementos */
 }
 
 .explore-menu h1{
-    color: #262626;
-    font-weight: 500;
+    color: #262626;/* Color de fuente */
+    font-weight: 500;/* Grosor de la fuente */
 }
 
 .explore-menu-text{
-    color: #262626;
+    color: #262626;/* Color de fuente */
 }
 
 .explore-menu-list{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    text-align: center;
-    margin: 20px 0px;
-    overflow-x: scroll;
+    display: flex;/* Flexbox */
+    justify-content: center;/* Alineación centrada */
+    align-items: center;/* Alineación centrada */
+    gap: 5px;/* Espacio entre elementos */
+    text-align: center;/* Alineación centrada */
+    margin: 20px 0;/* 20px de margen arriba y abajo */
+    overflow-x: auto; /* Cambié scroll a auto */
+    padding: 10px 20px; /* Espacio a los lados */
+    white-space: nowrap; /* Evita saltos de línea */
 }
 
 
+.explore-menu-item {
+    display: flex;
+    flex-direction: column; /* Alinear imagen y texto verticalmente */
+    align-items: center; /* Centrar contenido */
+    text-align: center;
+}
 
-.explore-menu-item img{
-    width:  8.5vw;
-    min-width: 80px;
+.explore-menu-item img {
+    width: 7.5vw; /* Ancho relativo */
+    min-width: 200px; /* Ancho mínimo */
+    height: 12vw; /* Alto igual al ancho para mantener proporción */
+    min-height: 120px; /* Altura mínima */
+    object-fit: cover; /* Recorta la imagen sin deformarla */
     cursor: pointer;
-    border-radius: 0.2s;
-    transition: 0.2s;
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.2s ease-in-out; /* Suavizar transiciones */
+}
+
+/* Añadir efecto al pasar el mouse */
+.explore-menu-item img:hover {
+    transform: scale(1.1); /* Aumentar tamaño ligeramente */
 }
 
 .explore-menu-list::-webkit-scrollbar{
-    display: none;
+    display: none; /* Oculta la barra de desplazamiento */
 }
 
 .explore-menu-item p{
-    margin-top: 10px;
-    font-size: max(1vw, 14px);
-    color: #747474;
-    cursor: pointer;
+    margin-top: 10px;/* 10px de margen superior */
+    font-size: max(1vw, 14px);/* Tamaño de fuente mínimo de 14px */
+    color: #747474;/* Color de fuente */
+    cursor: pointer;/* Cursor de puntero */
 }
 
 .explore-menu hr{
-    margin: 10px 0px;
-    height: 2px;
-    background-color: #e2e2e2;
-    border: none;
+    margin: 10px 0px;/* 10px de margen arriba y abajo */
+    height: 2px;/* Altura de 2px */
+    background-color: #e2e2e2;/* Color de fondo */
+    border: none;/* Sin borde */
 }
 
-.explore-menu-item img.active {
-    border: 4px solid #73cef2;
-    border-radius: 5vw;
-    padding: 2px;
-}
 
 
