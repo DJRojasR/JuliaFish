@@ -8,7 +8,7 @@ const Navabar = () => {
     //Creamos un div con la clase app y Agregamos el componente Navabar
     <div className="navbar">
       {/* Agregamos el logo de JuliaFish */}
-      <img src={assets.logoJuliaFish} alt="" className="logo" />
+      <img src={assets.logo_juliaFish} alt="" className="logo" />
       {/* Creamos un ul con la clase navbar-menu (barra de navegación) */}
       <ul className="navbar-menu">
         {/* Creamos la lista de elementos de la barra de navgación
