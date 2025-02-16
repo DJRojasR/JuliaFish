@@ -14,31 +14,30 @@
 }
 
 .explore-menu-list{
-    display: flex;/* Flexbox */
-    justify-content: center;/* Alineación centrada */
-    align-items: center;/* Alineación centrada */
-    gap: 5px;/* Espacio entre elementos */
+    display: flex;
+    justify-content: flex-start; /* Distribución uniforme */
+    align-items: center;
     text-align: center;/* Alineación centrada */
-    margin: 20px 0;/* 20px de margen arriba y abajo */
+    margin: 20px 0px;/* 20px de margen arriba y abajo */
+    gap: 5px; /* Espacio uniforme entre elementos */
+    padding: 10px 0px; /* Espacio a los lados */
     overflow-x: auto; /* Cambié scroll a auto */
-    padding: 10px 20px; /* Espacio a los lados */
-    white-space: nowrap; /* Evita saltos de línea */
+    white-space: nowrap; /* Evita que los elementos se desborden */
+    padding-left: 10px; /* Reduce espacio en los bordes */
+    padding-right: 5px; /* Reduce espacio en los bordes */
 }
 
 
 .explore-menu-item {
-    display: flex;
-    flex-direction: column; /* Alinear imagen y texto verticalmente */
-    align-items: center; /* Centrar contenido */
-    text-align: center;
+    min-width: 225px; /* Mantiene los elementos con un tamaño uniforme */
+    max-width: 150px;
+    flex-shrink: 0; /* Evita que los elementos se reduzcan y generen espacios extra */
 }
 
 .explore-menu-item img {
-    width: 7.5vw; /* Ancho relativo */
-    min-width: 200px; /* Ancho mínimo */
-    height: 12vw; /* Alto igual al ancho para mantener proporción */
-    min-height: 120px; /* Altura mínima */
-    object-fit: cover; /* Recorta la imagen sin deformarla */
+    width: clamp(190px, 6.5vw, 230px); /* Mantiene tamaños consistentes */
+    height: clamp(170px, 8.5vw, 200px);
+    object-fit: cover;
     cursor: pointer;
     border-radius: 10px; /* Bordes redondeados */
     transition: transform 0.2s ease-in-out; /* Suavizar transiciones */
