@@ -1,5 +1,4 @@
 /*estilos para el contenido de la carta top dishes*/
-
 .food-display {
   margin-top: 30px; /* margen superior*/
 }
@@ -10,6 +9,7 @@
 .food-display-list {
   display: grid; /* cuadricula para la visualizacion */
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  margin-top: 30px;
   gap: 30px;
   row-gap: 50px;
 }
