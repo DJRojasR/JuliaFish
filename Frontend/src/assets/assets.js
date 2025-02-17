@@ -171,7 +171,7 @@ export const food_list = [
     image: food_6,
     price: 24,
     description:
-      "Arroz chaufa con langostinos salteados al wok.",
+      "Arroz chaufa con langostinos salteados al wok con verduras y especias peruanas.",
     category: "Chaufa",
   },
   {
@@ -241,7 +241,7 @@ export const food_list = [
     name: "Causa de Langostinos",
     image: food_14,
     price: 18,
-    description: "Causa rellena con langostinos.",
+    description: "Causa rellena con langostinos frescos, acompañada de salsa de ají amarillo.",
     category: "Causas"
   },
   {
@@ -265,8 +265,8 @@ export const food_list = [
     name: "Chicharrón Langostinos",
     image: food_17,
     price: 14,
-    description: "Crujientes langostinos fritos.",
-    category: "Mariscos"
+    description: "Crujientes langostinos fritos acompañados de yuca y salsas criollas.",
+    category: "Chicaharrones"
   },
   {
     _id:"18",
@@ -305,7 +305,7 @@ export const food_list = [
     name: "Laguna Azul",
     image: food_22,
     price: 22,
-    description: "Refrescante coctel azul con pisco y un toque de limón.",
+    description: "Refrescante coctel azul con pisco y un toque de limón y menta.",
     category: "Cocteles"
   },
   {
