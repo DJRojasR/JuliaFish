@@ -5,7 +5,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
 
-  /*agregamos el estado de cartItems*/
+  /*agregamos el estado de cartItems agregando un objeto vacio y tambien agrega un item al carrito*/
   const[cartItems, setCartItems] = useState({});
   /*agregamos la funcion addToCart*/
   const addToCart = (itemId) => {
@@ -16,9 +16,10 @@ const StoreContextProvider = (props) => {
     }
 }
 
-const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
-};
+  /*agregamos la funcion removeFromCart que remueve un item del carrito*/
+  const removeFromCart = (itemId) => {
+      setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
+  };
   
 
   /*agregamos un useEffect para ver el estado de cartItems*/
