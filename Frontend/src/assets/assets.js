@@ -1,6 +1,7 @@
 import basket_icon from "./basket_icon.png";
 import logo from "./logo.png";
 import logo_juliaFish from "./logo_juliaFish.png";
+import juliaFishLogo2 from "./juliaFishLogo2.png";
 import header_img from "./header_img.png";
 import search_icon from "./search_icon.png";
 import menu_1 from "./menu_1.png";
@@ -63,6 +64,7 @@ import parcel_icon from "./parcel_icon.png";
 
 export const assets = {
   logo,
+  juliaFishLogo2,
   logo_juliaFish,
   basket_icon,
   header_img,

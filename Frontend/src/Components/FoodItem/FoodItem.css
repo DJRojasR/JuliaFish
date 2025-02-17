@@ -61,3 +61,7 @@
 .food-item-counter img {
   width: 30px;/*ancho de la imagen*/
 }
+
+.food-item {
+  margin-bottom: 50px; /* se agrego este margen para separar los items de comida */
+}
