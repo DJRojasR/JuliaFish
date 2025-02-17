@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
+import { Link } from "react-router-dom";
 //Creanos un componente funcional llamado Navabar y tambien creamos un archivo css llamado Navabar.css
-const Navabar = () => {
+const Navabar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("menu");
   return (
     //Creamos un div con la clase app y Agregamos el componente Navabar
@@ -13,30 +14,34 @@ const Navabar = () => {
       <ul className="navbar-menu">
         {/* Creamos la lista de elementos de la barra de navgación
                 cramos clases en la barra de navegacion */}
-        <li
+        <Link
+          to="/"
           onClick={() => setMenu("home")}
           className={menu === "home" ? "active" : ""}
         >
           home
-        </li>
-        <li
+        </Link>
+        <a
+          href="#explore-menu"
           onClick={() => setMenu("menu")}
           className={menu === "menu" ? "active" : ""}
         >
           menu
-        </li>
-        <li
+        </a>
+        <a
+          href="#app-download"
           onClick={() => setMenu("mobile-app")}
           className={menu === "mobile-app" ? "active" : ""}
         >
           mobile-app
-        </li>
-        <li
+        </a>
+        <a
+          href="#footer"
           onClick={() => setMenu("contact-us")}
           className={menu === "contact-us" ? "active" : ""}
         >
           contact us
-        </li>
+        </a>
       </ul>
       {/* Creamos un div con la clase navbar-right */}
       <div className="navbar-right">
@@ -49,7 +54,7 @@ const Navabar = () => {
           <div className="dot"></div>
         </div>
         {/* Agregamos un botón con el texto sign in(lo traduce automaticamente a inciar seccion xdxdxd) */}
-        <button>sign in</button>
+        <button onClick={() => setShowLogin(true)}>sign in</button>
       </div>
     </div>
   );
