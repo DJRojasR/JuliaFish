@@ -121,7 +121,7 @@ export const menu_list = [
 
 export const food_list = [
   {
-    _id: "1",
+    _id:"1",
     name: "Ceviche de Pescado",
     image: food_1,
     price: 12,
@@ -130,7 +130,7 @@ export const food_list = [
     category: "Ceviche",
   },
   {
-    _id: "2",
+    _id:"2",
     name: "Ceviche mixto",
     image: food_2,
     price: 18,
@@ -139,7 +139,7 @@ export const food_list = [
     category: "Ceviche",
   },
   {
-    _id: "3",
+    _id:"3",
     name: "Ceviche de Langostinos",
     image: food_3,
     price: 16,
@@ -148,7 +148,7 @@ export const food_list = [
     category: "Ceviche",
   },
   {
-    _id: "4",
+    _id:"4",
     name: "Ceviche de Conchas Negras",
     image: food_4,
     price: 24,
@@ -157,7 +157,7 @@ export const food_list = [
     category: "Ceviche",
   },
   {
-    _id: "5",
+    _id:"5",
     name: "Chaufa de mariscos",
     image: food_5,
     price: 24,
@@ -166,7 +166,7 @@ export const food_list = [
     category: "Chaufa",
   },
   {
-    _id: "6",
+    _id:"6",
     name: "Chaufa de langostinos",
     image: food_6,
     price: 24,
@@ -175,7 +175,7 @@ export const food_list = [
     category: "Chaufa",
   },
   {
-    _id: "7",
+    _id:"7",
     name: "Chaufa de pescado",
     image: food_7,
     price: 24,
@@ -184,7 +184,7 @@ export const food_list = [
     category: "Chaufa",
   },
   {
-    _id: "8",
+    _id:"8",
     name: "Parihuela",
     image: food_8,
     price: 30,
@@ -193,7 +193,7 @@ export const food_list = [
     category: "Sopas",
   },
   {
-    _id: "9",
+    _id:"9",
     name: "Chupe de langostinos",
     image: food_9,
     price: 30,
@@ -202,7 +202,7 @@ export const food_list = [
     category: "Sopas",
   },
   {
-    _id: "10",
+    _id:"10",
     name: "Chupe de camarón",
     image: food_10,
     price: 30,
@@ -211,7 +211,7 @@ export const food_list = [
     category: "Sopas",
   },
   {
-    _id: "11",
+    _id:"11",
     name: "Sudado de pescado",
     image: food_11,
     price: 24,
@@ -220,7 +220,7 @@ export const food_list = [
     category: "Sopas",
   },
   {
-    _id: "12",
+    _id:"12",
     name: "Sudado de tramboyo",
     image: food_12,
     price: 24,
@@ -229,7 +229,7 @@ export const food_list = [
     category: "Sopas",
   },
   {
-    _id: "13",
+    _id:"13",
     name: "Causa de Cangrejo",
     image: food_13,
     price: 12,
@@ -237,7 +237,7 @@ export const food_list = [
     category: "Causas"
   },
   {
-    _id: "14",
+    _id:"14",
     name: "Causa de Langostinos",
     image: food_14,
     price: 18,
@@ -245,7 +245,7 @@ export const food_list = [
     category: "Causas"
   },
   {
-    _id: "15",
+    _id:"15",
     name: "Causa de Pollito",
     image: food_15,
     price: 16,
@@ -253,7 +253,7 @@ export const food_list = [
     category: "Causas"
   },
   {
-    _id: "16",
+    _id:"16",
     name: "Causa de Pulpo",
     image: food_16,
     price: 24,
@@ -261,7 +261,7 @@ export const food_list = [
     category: "Causas"
   },
   {
-    _id: "17",
+    _id:"17",
     name: "Chicharrón Langostinos",
     image: food_17,
     price: 14,
@@ -269,7 +269,7 @@ export const food_list = [
     category: "Mariscos"
   },
   {
-    _id: "18",
+    _id:"18",
     name: "Chicharrón de Pota",
     image: food_18,
     price: 12,
@@ -277,7 +277,7 @@ export const food_list = [
     category: "Chicaharrones"
   },
   {
-    _id: "19",
+    _id:"19",
     name: "Chicharrón Pescado",
     image: food_19,
     price: 20,
@@ -285,7 +285,7 @@ export const food_list = [
     category: "Chicaharrones"
   },
   {
-    _id: "20",
+    _id:"20",
     name: "Jalea de Mariscos",
     image: food_20,
     price: 15,
@@ -293,7 +293,7 @@ export const food_list = [
     category: "Chicaharrones"
   },
   {
-    _id: "21",
+    _id:"21",
     name: "Machu Picchu",
     image: food_21,
     price: 14,
@@ -301,7 +301,7 @@ export const food_list = [
     category: "Cocteles"
   },
   {
-    _id: "22",
+    _id:"22",
     name: "Laguna Azul",
     image: food_22,
     price: 22,
@@ -309,7 +309,7 @@ export const food_list = [
     category: "Cocteles"
   },
   {
-    _id: "23",
+    _id:"23",
     name: "Piña Colada",
     image: food_23,
     price: 10,
@@ -317,7 +317,7 @@ export const food_list = [
     category: "Cocteles"
   },
   {
-    _id: "24",
+    _id:"24",
     name: "Pisco Sour",
     image: food_24,
     price: 12,
@@ -325,7 +325,7 @@ export const food_list = [
     category: "Cocteles"
   },
   {
-    _id: "25",
+    _id:"25",
     name: "Arroz con mariscos",
     image: food_25,
     price: 30,
@@ -334,7 +334,7 @@ export const food_list = [
     category: "Arroces",
   },
   {
-    _id: "26",
+    _id:"26",
     name: "Arroz con langostinos",
     image: food_26,
     price: 32,
@@ -343,7 +343,7 @@ export const food_list = [
     category: "Arroces",
   },
   {
-    _id: "27",
+    _id:"27",
     name: "Arroz con pato",
     image: food_27,
     price: 24,
@@ -352,7 +352,7 @@ export const food_list = [
     category: "Arroces",
   },
   {
-    _id: "28",
+    _id:"28",
     name: "Arroz con pollo",
     image: food_28,
     price: 24,
@@ -361,7 +361,7 @@ export const food_list = [
     category: "Arroces",
   },
   {
-    _id: 29,
+    _id:"29",
     name: "Chicha Morada",
     image: food_29,
     price: 14,
@@ -369,7 +369,7 @@ export const food_list = [
     category: "Bebidas"
   },
   {
-    _id: 30,
+    _id:"30",
     name: "Limonada Frozen",
     image: food_30,
     price: 16,
@@ -377,7 +377,7 @@ export const food_list = [
     category: "Bebidas"
   },
   {
-    _id: 31,
+    _id:"31",
     name: "Maracuyá Frozen",
     image: food_31,
     price: 16,
@@ -385,7 +385,7 @@ export const food_list = [
     category: "Bebidas"
   },
   {
-    _id: 32,
+    _id:"32",
     name: "Gaseosa",
     image: food_32,
     price: 12,
