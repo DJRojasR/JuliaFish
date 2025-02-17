@@ -110,7 +110,7 @@ export const menu_list = [
     menu_image: menu_6,
   },
   {
-    menu_name: "Arroz con Mariscos",
+    menu_name: "Arroces",
     menu_image: menu_7,
   },
   {
@@ -122,290 +122,275 @@ export const menu_list = [
 export const food_list = [
   {
     _id: "1",
-    name: "Greek salad",
+    name: "Ceviche de Pescado",
     image: food_1,
     price: 12,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Salad",
+      "Clásico plato peruano a base de pescado fresco marinado en limón, acompañado de cebolla, choclo y camote.",
+    category: "Ceviche",
   },
   {
     _id: "2",
-    name: "Veg salad",
+    name: "Ceviche mixto",
     image: food_2,
     price: 18,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Salad",
+      "Delicioso ceviche con una combinación de pescado y mariscos frescos, marinado con limón y especias peruanas.",
+    category: "Ceviche",
   },
   {
     _id: "3",
-    name: "Clover Salad",
+    name: "Ceviche de Langostinos",
     image: food_3,
     price: 16,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Salad",
+      "Langostinos frescos marinados en limón, con cebolla morada y camote",
+    category: "Ceviche",
   },
   {
     _id: "4",
-    name: "Chicken Salad",
+    name: "Ceviche de Conchas Negras",
     image: food_4,
     price: 24,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Salad",
+      "Especialidad del norte peruano, elaborado con conchas negras frescas y jugo de limón.",
+    category: "Ceviche",
   },
   {
     _id: "5",
-    name: "Lasagna Rolls",
+    name: "Chaufa de mariscos",
     image: food_5,
-    price: 14,
+    price: 24,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Rolls",
+      "Arroz frito al estilo con una mezcla de mariscos y sazonado con sillao y especias.",
+    category: "Chaufa",
   },
   {
     _id: "6",
-    name: "Peri Peri Rolls",
+    name: "Chaufa de langostinos",
     image: food_6,
-    price: 12,
+    price: 24,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Rolls",
+      "Arroz chaufa con langostinos salteados al wok.",
+    category: "Chaufa",
   },
   {
     _id: "7",
-    name: "Chicken Rolls",
+    name: "Chaufa de pescado",
     image: food_7,
-    price: 20,
+    price: 24,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Rolls",
+      "Arroz frito con trozos de pescado crocante, sazonado al estilo oriental con sillao y especias.",
+    category: "Chaufa",
   },
   {
     _id: "8",
-    name: "Veg Rolls",
+    name: "Parihuela",
     image: food_8,
-    price: 15,
+    price: 30,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Rolls",
+      "Sopa concentrada de mariscos con ají panca, chicha de jora y un toque de culantro.",
+    category: "Sopas",
   },
   {
     _id: "9",
-    name: "Ripple Ice Cream",
+    name: "Chupe de langostinos",
     image: food_9,
-    price: 14,
+    price: 30,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Deserts",
+      "Sopa cremosa a base de langostinos, leche, queso, huevo y papas amarillas.",
+    category: "Sopas",
   },
   {
     _id: "10",
-    name: "Fruit Ice Cream",
+    name: "Chupe de camarón",
     image: food_10,
-    price: 22,
+    price: 30,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Deserts",
+      "Tradicional sopa arequipeña con camarones frescos, leche, arroz y queso fresco.",
+    category: "Sopas",
   },
   {
     _id: "11",
-    name: "Jar Ice Cream",
+    name: "Sudado de pescado",
     image: food_11,
-    price: 10,
+    price: 24,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Deserts",
+      "Filete de pescado cocinado al vapor con tomate, ají amarillo y chicha de jora.",
+    category: "Sopas",
   },
   {
     _id: "12",
-    name: "Vanilla Ice Cream",
+    name: "Sudado de tramboyo",
     image: food_12,
-    price: 12,
+    price: 24,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Deserts",
+      "Sudado tradicional con tramboyo fresco, tomate, ají amarillo y chicha de jora.",
+    category: "Sopas",
   },
   {
     _id: "13",
-    name: "Chicken Sandwich",
+    name: "Causa de Cangrejo",
     image: food_13,
     price: 12,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Sandwich",
+    description: "Causa limeña rellena con cangrejo, acompañada de salsa de ají amarillo.",
+    category: "Causas"
   },
   {
     _id: "14",
-    name: "Vegan Sandwich",
+    name: "Causa de Langostinos",
     image: food_14,
     price: 18,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Sandwich",
+    description: "Causa rellena con langostinos.",
+    category: "Causas"
   },
   {
     _id: "15",
-    name: "Grilled Sandwich",
+    name: "Causa de Pollito",
     image: food_15,
     price: 16,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Sandwich",
+    description: "Clásica causa limeña rellena de pollo deshilachado con mayonesa casera.",
+    category: "Causas"
   },
   {
     _id: "16",
-    name: "Bread Sandwich",
+    name: "Causa de Pulpo",
     image: food_16,
     price: 24,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Sandwich",
+    description: "Causa rellena con pulpo al olivo, una combinación perfecta de sabor y textura.",
+    category: "Causas"
   },
   {
     _id: "17",
-    name: "Cup Cake",
+    name: "Chicharrón Langostinos",
     image: food_17,
     price: 14,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Cake",
+    description: "Crujientes langostinos fritos.",
+    category: "Mariscos"
   },
   {
     _id: "18",
-    name: "Vegan Cake",
+    name: "Chicharrón de Pota",
     image: food_18,
     price: 12,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Cake",
+    description: "Trozos de pota empanizados y fritos, servidos con yuca y salsas criollas.",
+    category: "Chicaharrones"
   },
   {
     _id: "19",
-    name: "Butterscotch Cake",
+    name: "Chicharrón Pescado",
     image: food_19,
     price: 20,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Cake",
+    description: "Deliciosos trozos de pescado empanizados y fritos, con salsas y acompañamientos.",
+    category: "Chicaharrones"
   },
   {
     _id: "20",
-    name: "Sliced Cake",
+    name: "Jalea de Mariscos",
     image: food_20,
     price: 15,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Cake",
+    description: "Fritura mixta de mariscos, acompañada de salsas y yuca dorada.",
+    category: "Chicaharrones"
   },
   {
     _id: "21",
-    name: "Garlic Mushroom ",
+    name: "Machu Picchu",
     image: food_21,
     price: 14,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Pure Veg",
+    description: "Coctel exótico con pisco, licor de menta y jugo de frutas tropicales.",
+    category: "Cocteles"
   },
   {
     _id: "22",
-    name: "Fried Cauliflower",
+    name: "Laguna Azul",
     image: food_22,
     price: 22,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Pure Veg",
+    description: "Refrescante coctel azul con pisco y un toque de limón.",
+    category: "Cocteles"
   },
   {
     _id: "23",
-    name: "Mix Veg Pulao",
+    name: "Piña Colada",
     image: food_23,
     price: 10,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Pure Veg",
+    description: "Bebida tropical a base de piña, coco y ron, servida con hielo granizado.",
+    category: "Cocteles"
   },
   {
     _id: "24",
-    name: "Rice Zucchini",
+    name: "Pisco Sour",
     image: food_24,
     price: 12,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Pure Veg",
+    description: "El clásico cóctel peruano con pisco, limón, clara de huevo y un toque de amargo de angostura.",
+    category: "Cocteles"
   },
   {
     _id: "25",
-    name: "Cheese Pasta",
+    name: "Arroz con mariscos",
     image: food_25,
-    price: 12,
+    price: 30,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Pasta",
+      "Plato criollo con arroz amarillo salteado con una variedad de mariscos y especias peruanas.",
+    category: "Arroces",
   },
   {
     _id: "26",
-    name: "Tomato Pasta",
+    name: "Arroz con langostinos",
     image: food_26,
-    price: 18,
+    price: 32,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Pasta",
+      "Variante del arroz con mariscos, destacando los langostinos en una preparación bien sazonada .",
+    category: "Arroces",
   },
   {
     _id: "27",
-    name: "Creamy Pasta",
+    name: "Arroz con pato",
     image: food_27,
-    price: 16,
+    price: 24,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Pasta",
+      "Plato típico del norte peruano, elaborado con arroz y pato cocido en chicha de jora y culantro.",
+    category: "Arroces",
   },
   {
     _id: "28",
-    name: "Chicken Pasta",
+    name: "Arroz con pollo",
     image: food_28,
     price: 24,
     description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Pasta",
+      "Arroz verde sazonado con culantro y acompañado de una presa de pollo dorado.",
+    category: "Arroces",
   },
   {
-    _id: "29",
-    name: "Buttter Noodles",
+    _id: 29,
+    name: "Chicha Morada",
     image: food_29,
     price: 14,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Noodles",
+    description: "Refrescante bebida peruana a base de maíz morado, con canela y clavo de olor.",
+    category: "Bebidas"
   },
   {
-    _id: "30",
-    name: "Veg Noodles",
+    _id: 30,
+    name: "Limonada Frozen",
     image: food_30,
-    price: 12,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Noodles",
+    price: 16,
+    description: "Limonada frappé con un toque de azúcar y hielo granizado, perfecta para los días calurosos.",
+    category: "Bebidas"
   },
   {
-    _id: "31",
-    name: "Somen Noodles",
+    _id: 31,
+    name: "Maracuyá Frozen",
     image: food_31,
-    price: 20,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Noodles",
+    price: 16,
+    description: "Bebida tropical a base de maracuyá con hielo granizado, ideal para refrescarte.",
+    category: "Bebidas"
   },
   {
-    _id: "32",
-    name: "Cooked Noodles",
+    _id: 32,
+    name: "Gaseosa",
     image: food_32,
-    price: 15,
-    description:
-      "Food provides essential nutrients for overall health and well-being",
-    category: "Noodles",
-  },
+    price: 12,
+    description: "Variedad de bebidas gaseosas en diferentes sabores para acompañar tu comida.",
+    category: "Bebidas"
+  }
+  
 ];
