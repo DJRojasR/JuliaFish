@@ -137,7 +137,7 @@ export const food_list = [
     image: food_2,
     price: 18,
     description:
-      "Delicioso ceviche con una combinación de pescado y mariscos frescos, marinado con limón y especias peruanas.",
+      "Delicioso ceviche con una combinación de pescado y mariscos frescos, marinado con limón y especias.",
     category: "Ceviche",
   },
   {

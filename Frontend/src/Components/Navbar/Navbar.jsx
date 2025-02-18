@@ -8,12 +8,15 @@ const Navabar = ({ setShowLogin }) => {
   return (
     //Creamos un div con la clase app y Agregamos el componente Navabar
     <div className="navbar">
-      {/* Agregamos el logo de JuliaFish */}
-      <img src={assets.logo_juliaFish} alt="" className="logo" />
-      {/* Creamos un ul con la clase navbar-menu (barra de navegación) */}
-      <ul className="navbar-menu">
-        {/* Creamos la lista de elementos de la barra de navgación
-                cramos clases en la barra de navegacion */}
+
+      {/* Agregamos el logo de JuliaFish y un Link a la pagina principal */}
+      <Link  to="/">
+        <img src={assets.logo_juliaFish} alt="" className="logo" />
+      </Link>
+      
+        {/* Creamos un ul con la clase navbar-menu (barra de navegación) */}
+          <ul className="navbar-menu">
+        {/* Creamos la lista de elementos de la barra de navgación cramos clases en la barra de navegacion */}
         <Link
           to="/"
           onClick={() => setMenu("home")}
@@ -43,19 +46,27 @@ const Navabar = ({ setShowLogin }) => {
           contact us
         </a>
       </ul>
-      {/* Creamos un div con la clase navbar-right */}
-      <div className="navbar-right">
+        {/* Creamos un div con la clase navbar-right */}
+        <div className="navbar-right">
+
         {/* Agregamos el icono de búsqueda y el icono de la cesta de compras */}
         <img src={assets.search_icon} alt="" />
+
         {/* Agregamos un div con la clase navbar-search-icon */}
         <div className="navbar-search-icon">
-          {/* Agregamos un icono de cesta de compras y un div con la clase dot */}
-          <img src={assets.basket_icon} alt="" />
+
+          {/* Agregamos un icono de cesta de compras y un Link a la pagina de cesta de compras */}
+          <Link to="/Cart">
+              <img src={assets.basket_icon} alt="" />
+          </Link>
+
+          {/*y un div con la clase dot */}
           <div className="dot"></div>
-        </div>
-        {/* Agregamos un botón con el texto sign in(lo traduce automaticamente a inciar seccion xdxdxd) */}
-        <button onClick={() => setShowLogin(true)}>sign in</button>
-      </div>
+          </div>
+
+          {/* Agregamos un botón con el texto sign in(lo traduce automaticamente a inciar seccion xdxdxd) */}
+          <button onClick={() => setShowLogin(true)}>sign in</button>
+     </div>
     </div>
   );
 };
