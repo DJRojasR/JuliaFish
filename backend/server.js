@@ -8,6 +8,7 @@
 import express from "express";
 // Importamos CORS para permitir solicitudes desde diferentes orígenes (necesario para frontend-backend)
 import cors from "cors";
+import { connectDB } from "./config/db.js";
 
 // Creamos una instancia de la aplicación Express
 const app = express();
@@ -19,6 +20,9 @@ app.use(express.json());
 // Middleware para permitir solicitudes desde otros dominios (CORS)
 app.use(cors());
 
+//db coneccion
+connectDB();
+
 // Ruta principal: responde con un mensaje cuando se accede a "/"
 app.get("/", (req, res) => {
   res.send("API Working"); // Responde con un mensaje simple para verificar que la API está en funcionamiento
@@ -28,3 +32,5 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Server Started on http://localhost:${port} `); // Mensaje en consola indicando que el servidor está en ejecución
 });
+
+// mongodb+srv://DJRojasR:<db_password>@cluster0.8qqyr.mongodb.net/?
