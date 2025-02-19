@@ -74,7 +74,7 @@
 }
 .cart-total button{
     
-    background-color: rgb(5, 204, 5);
+    background-color: rgb(24, 210, 24);
     color: white;
     border: none;
     border-radius: 5px;
@@ -85,8 +85,8 @@
     align-items: center;
     align-self: center;/*Para centrarlo en el medio*/
     justify-content: center;
-    width: max(7.5vw,132px);
-    padding: 10px 20px;/*Espacio interno*/
+    width: max(15vw,200px);
+    padding: 12px 0px;/*Espacio interno*/
     /* Transición suave */
     transition: all 0.3s ease-in-out;
 }
