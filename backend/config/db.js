@@ -1,9 +1,14 @@
 import mongoose from "mongoose";
+
 export const connectDB = async () => {
-  await mongoose
-    .connect(
-      ""
-    )
-    .then(() => console.log("BD Connected"));
-	//me quede en 3.45
+  try {
+    await mongoose.connect("mongodb+srv://DJRojasR:Mongodb2025@cluster0.8qqyr.mongodb.net/food-del", {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("🔥 Conectado a MongoDB");
+  } catch (error) {
+    console.error("❌ Error en la conexión a MongoDB:", error);
+    process.exit(1); // Sale del proceso si hay error
+  }
 };
