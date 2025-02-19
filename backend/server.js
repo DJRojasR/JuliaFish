@@ -1,3 +1,9 @@
+
+/**
+ * CONFIGURANDO EL SERVIDOR
+ */
+
+
 // Importamos Express para crear el servidor
 import express from "express";
 // Importamos CORS para permitir solicitudes desde diferentes orígenes (necesario para frontend-backend)
