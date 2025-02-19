@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Link } from "react-router-dom";
+import { StoreContext } from "../../context/StoreContext";
 //Creanos un componente funcional llamado Navabar y tambien creamos un archivo css llamado Navabar.css
 const Navabar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("menu");
+  const{getTotalCartAmount}=useContext(StoreContext);
   return (
     //Creamos un div con la clase app y Agregamos el componente Navabar
     <div className="navbar">
@@ -13,7 +15,7 @@ const Navabar = ({ setShowLogin }) => {
       <Link  to="/">
         <img src={assets.logo_juliaFish} alt="" className="logo" />
       </Link>
-      
+     
         {/* Creamos un ul con la clase navbar-menu (barra de navegación) */}
           <ul className="navbar-menu">
         {/* Creamos la lista de elementos de la barra de navgación cramos clases en la barra de navegacion */}
@@ -61,8 +63,8 @@ const Navabar = ({ setShowLogin }) => {
           </Link>
 
           {/*y un div con la clase dot */}
-          <div className="dot"></div>
-          </div>
+          <div className={getTotalCartAmount()===0?"":"dot"}></div>
+        </div>
 
           {/* Agregamos un botón con el texto sign in(lo traduce automaticamente a inciar seccion xdxdxd) */}
           <button onClick={() => setShowLogin(true)}>sign in</button>
@@ -72,3 +74,4 @@ const Navabar = ({ setShowLogin }) => {
 };
 
 export default Navabar;
+
