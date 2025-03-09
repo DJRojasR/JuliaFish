@@ -9,7 +9,7 @@ import express from "express";
 // Importamos CORS para permitir solicitudes desde diferentes orígenes (necesario para frontend-backend)
 import cors from "cors";
 import { connectDB } from "./config/db.js";
-
+import foodRoute from "./routes/foodRoute.js";
 // Creamos una instancia de la aplicación Express
 const app = express();
 // Definimos el puerto en el que correrá el servidor
@@ -23,6 +23,9 @@ app.use(cors());
 //db coneccion
 connectDB();
 
+//Api endpoints
+app.use("/api/food", foodRoute);
+
 // Ruta principal: responde con un mensaje cuando se accede a "/"
 app.get("/", (req, res) => {
   res.send("API Working"); // Responde con un mensaje simple para verificar que la API está en funcionamiento
@@ -34,3 +37,8 @@ app.listen(port, () => {
 });
 
 // mongodb+srv://DJRojasR:<db_password>@cluster0.8qqyr.mongodb.net/?
+
+// mongodb+srv://DJRojasR:<db_password>@cluster0.8qqyr.mongodb.net/?
+
+/**
+ */
