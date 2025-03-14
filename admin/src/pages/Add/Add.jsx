@@ -53,7 +53,7 @@ const Add = () => {
           </div>
 
           <button type="submit" className="add-btn">
-            Agregar
+            Agregar producto
           </button>
         </form>
       </div>
