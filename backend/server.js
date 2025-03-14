@@ -25,6 +25,7 @@ connectDB();
 
 //Api endpoints
 app.use("/api/food", foodRoute);
+app.use("/image", express.static("uploads"));
 
 // Ruta principal: responde con un mensaje cuando se accede a "/"
 app.get("/", (req, res) => {
