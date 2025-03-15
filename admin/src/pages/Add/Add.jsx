@@ -17,11 +17,11 @@ const Add = () => {
         </div>
         <div className="add-product-name flex-col">
             <p>Product name</p>
-            <input type="text" name='name' placeholder='Type here' />
+            <input type="text" name='name' placeholder='Type here' required />
         </div>
         <div className="add-product-description flex-col">
             <p>Product description</p>
-            <textarea name='description' rows="6" placeholder='Write content here' />
+            <textarea name='description' rows="6" placeholder='Write content here' required />
         </div>
         <div className="add-category-price">
           <div className="add-category flex-col">
@@ -39,7 +39,7 @@ const Add = () => {
           </div>
           <div className="add-price flex-col">
             <p>Price</p>
-            <input type="number" name='price' placeholder='Type here' />
+            <input type="number" name='price' placeholder='Type here' required />
           </div>
         </div>
         <button type='submit' className='add-button'>Add item</button>
