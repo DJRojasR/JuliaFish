@@ -24,7 +24,7 @@ const registerUser = async (req, res) => {
 		
 		// validando email y contraseña fuerte
 		if(!validator.isEmail(email)){
-			return res.json({success:false,message:"Por favor ingresar un email valido"});
+			return res.json({success:false,message:"Por favor ingresar un email válido"});
 		}
 		if(password.length<8){
 			return res.json({success:false,message:"La contraseña debe tener al menos 8 caracteres"});
