@@ -10,6 +10,9 @@ import express from "express";
 import cors from "cors";
 import { connectDB } from "./config/db.js";
 import foodRoute from "./routes/foodRoute.js";
+import userRouter from "./routes/userRoute.js";
+import "dotenv/config"
+
 // Creamos una instancia de la aplicación Express
 const app = express();
 // Definimos el puerto en el que correrá el servidor
@@ -27,7 +30,7 @@ connectDB();
 app.use("/api/food", foodRoute);
 
 app.use("/images",express.static("uploads")) //para mostrar las imagenes en uploads
-
+app.use("/api/user", userRouter);
 
 // Ruta principal: responde con un mensaje cuando se accede a "/"
 app.get("/", (req, res) => {
