@@ -27,5 +27,30 @@
 	}
 }
 .cursor{
-	cursor: pointer;
+	padding: 3px 0px;/*Espacio interno*/
+    width: max(4.5vw,50px);
+    background-color: rgb(231, 31, 31);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 11px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Transición suave */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse */
+.cursor:hover {
+    background-color: red; /* Cambia el color */
+    transform: scale(1.1); /* Aumenta un 10% el tamaño */
+}
+
+/* Efecto al hacer clic */
+.cursor:active {
+    transform: scale(0.95); /* Reduce un poco al hacer clic */
 }

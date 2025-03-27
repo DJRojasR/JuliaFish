@@ -4,13 +4,36 @@ import bcrypt from "bcrypt";
 import validator from "validator";
 
 // login user
-const loginUser = async (req, res) => {};
+const loginUser = async (req, res) => {
+	const { email, password } = req.body;
+	try {
+		// revisando si el usuario ya existe
+		const user = await userModel.findOne({ email });
+		//si no existe el usuario
+		if (!user) {
+			return res.json({ success: false, message: "Credenciales inválidas" });
+		}
+		// comparando contraseñas
+		const match = await bcrypt.compare(password, user.password);
+		//si no coinciden las contraseñas
+		if (!match) {
+			return res.json({ success: false, message: "Credenciales inválidas" });
+		}
+		//creamos el token
+		const token = createToken(user._id);
+		res.json({ success: true, token });
+	} catch (error) {
+		console.log("Error en loginUser:", error); // 👀 Ver error detallado
+		res.json({ success: false, message: error.message }); // 👀 Enviar error real
+	}
+};
+
+const createToken = (id) => {
+    console.log("JWT_SECRET:", process.env.JWT_SECRET); // 👀 Ver si tiene valor
+    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "7d" });
+};
 
 
-const createToken=(id)=>{
-	return jwt.sign({id},process.env.JWT_SECRET)
-	
-}
 
 // register user
 const registerUser = async (req, res) => {
@@ -29,9 +52,12 @@ const registerUser = async (req, res) => {
 		if(password.length<8){
 			return res.json({success:false,message:"La contraseña debe tener al menos 8 caracteres"});
 		}
-		// encriptando la contraseña
-		 const salt=await bcrypt.genSalt(10);
-		 const hashedPassword=await bcrypt.hash(password,salt);
+		// encriptando la contraseña hacemos useo de exceptiones para manejar errores
+		
+			const salt = await bcrypt.genSalt(10);
+			const hashedPassword = await bcrypt.hash(password, salt);
+		
+		
 
 		const newUser = new userModel({
 			
@@ -45,15 +71,11 @@ const registerUser = async (req, res) => {
 		const token=createToken(user._id)
 		res.json({success:true,token});
 
-
-
-
-
 	} catch (error) {
-		console.log(error);
-		res.json({success:false,message:"Error" })
-		
+		console.log("Error en registerUser:", error); // 👀 Ver error detallado
+		res.json({ success: false, message: error.message }); // 👀 Enviar error real
 	}
+	
 };
 
 export { loginUser, registerUser };
