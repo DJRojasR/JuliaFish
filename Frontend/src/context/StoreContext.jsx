@@ -6,6 +6,8 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
   /*agregamos el estado de cartItems agregando un objeto vacio y tambien agrega un item al carrito*/
   const [cartItems, setCartItems] = useState({});
+  const url = "http://localhost:4000";
+  const [token, setToken] = useState("");
   /*agregamos la funcion addToCart*/
   const addToCart = (itemId) => {
     if (!cartItems[itemId]) {
@@ -38,7 +40,10 @@ const StoreContextProvider = (props) => {
     setCartItems,
     addToCart,
     removeFromCart,
-    getTotalCartAmount
+    getTotalCartAmount,
+    url, 
+    token,
+    setToken
   };
   return (
     <StoreContext.Provider value={contextValue}>
