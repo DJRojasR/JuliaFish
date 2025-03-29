@@ -12,6 +12,8 @@ import cors from "cors";
 import { connectDB } from "./config/db.js";
 import foodRoute from "./routes/foodRoute.js";
 import userRouter from "./routes/userRoute.js";
+import cartRouter from "./routes/cartRoute.js";
+
 
 // Creamos una instancia de la aplicación Express
 const app = express();
@@ -30,6 +32,7 @@ connectDB();
 app.use("/api/food", foodRoute);
 app.use("/images",express.static("uploads")) //para mostrar las imagenes en uploads
 app.use("/api/user", userRouter);
+app.use("/api/cart", cartRouter); // Ruta para el carrito de compras (aún no implementada)
 
 // Ruta principal: responde con un mensaje cuando se accede a "/"
 app.get("/", (req, res) => {
