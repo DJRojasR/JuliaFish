@@ -13,6 +13,7 @@ import { connectDB } from "./config/db.js";
 import foodRoute from "./routes/foodRoute.js";
 import userRouter from "./routes/userRoute.js";
 import cartRouter from "./routes/cartRoute.js";
+import orderRouter from "./routes/orderRoute.js";
 
 
 // Creamos una instancia de la aplicación Express
@@ -32,7 +33,8 @@ connectDB();
 app.use("/api/food", foodRoute);
 app.use("/images",express.static("uploads")) //para mostrar las imagenes en uploads
 app.use("/api/user", userRouter);
-app.use("/api/cart", cartRouter); // Ruta para el carrito de compras (aún no implementada)
+app.use("/api/cart", cartRouter); // Ruta para el carrito de compras 
+app.use("/api/order", orderRouter); // Ruta para las ordenes 
 
 // Ruta principal: responde con un mensaje cuando se accede a "/"
 app.get("/", (req, res) => {
