@@ -55,4 +55,44 @@ const placeOrder = async (req, res) => {
         res.json({success:false, message: "Error al crear la orden"})
     }
 }
-export {placeOrder} ;
+const verifyOrder = async (req, res) => {
+    const {orderId,success}=req.body;
+    try{
+            if(success="true"){
+                await orderModel.findByIdAndUpdate(orderId, {payment:true});
+                res.json({success:true, message:"Paid"})
+
+
+            }
+            else{
+                await orderModel.findByIdAndDelete(orderId);
+                res.json({success:false, message:"Not paid"});
+
+            }
+    }catch(error){
+        console.log(error);
+        res.json({success:false, message:"Error al verificar la orden"})
+
+    }
+}
+
+
+// user orders for fronted
+
+const userOrders= async (req,res)=>{
+    try{
+        const orders= await orderModel.find({userId:req.body.userId});
+        res.json({success:true, data:orders});
+
+    }catch(error){
+        console.log(error);
+        res.json({success:false,message:"Error"})
+    }
+
+
+};
+
+
+
+
+export {placeOrder,verifyOrder,userOrders}; 
