@@ -32,7 +32,9 @@ const MyOrders = () => {
           return (
             <div key={index} className="my-orders-order">
               <img src={assets.parcel_icon} alt="ZZZZ" />
-              <p></p>
+              <p>{order.items.map(()=>{
+                
+              })}</p>
             </div>
           );
         })}
