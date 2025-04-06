@@ -1,6 +1,5 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
-//import { food_list } from "../assets/assets";
 
 export const StoreContext = createContext(null);
 
@@ -64,17 +63,16 @@ const StoreContextProvider = (props) => {
     setCartItems(response.data.cartData);
   };
 
-  useEffect(() => {
-    async function loadData() {
-      await fetchFoodList();
-      if (localStorage.getItem("token")) {
-        setToken(localStorage.getItem("token"));
-        await loadCartData(localStorage.getItem("token"));
-      }
+useEffect(() => {
+  async function loadData() {
+    await fetchFoodList(); // ✅ Carga la comida
+    if (localStorage.getItem("token")) {
+      setToken(localStorage.getItem("token")); // ✅ Guarda el token en el estado
+      await loadCartData(localStorage.getItem("token")); // ❗ ¿Carga bien el carrito?
     }
-    loadData();
-  }, []);
-
+  }
+  loadData();
+}, []);
   /*agregamos la funcion removeFromCart*/
   const contextValue = {
     food_list,

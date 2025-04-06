@@ -30,7 +30,7 @@ const loginUser = async (req, res) => {
 
 const createToken = (id) => {
     console.log("JWT_SECRET:", process.env.JWT_SECRET); // 👀 Ver si tiene valor
-    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "7d" });
+    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "400d" });
 };
 
 

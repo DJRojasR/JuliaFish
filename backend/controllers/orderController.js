@@ -7,16 +7,20 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 //creamos la orden con los datos del usuario
 const placeOrder = async (req, res) => {
 
-    const frontendUrl = "http://localhost:5174/"; //URL del frontend
+    const frontendUrl = "http://localhost:5173"; //URL del frontend
     try {
        const newOrder = new orderModel({
            userId: req.body.userId,
            items: req.body.items,
            amount: req.body.amount,
-           adress: req.body.adress,
+           address: req.body.address,
        })
+       
+       // console.log(newOrder);
        await newOrder.save(); {/*guardamos la orden en la base de datos*/}
-       await userModel.findByIdAndUpdate(req.body.userId, {cartData: []});{/*borramos los items del carrito del usuario*/}
+       const orders = await orderModel.find({});
+       console.log("Órdenes después de insertar:", orders);
+       await userModel.findByIdAndUpdate(req.body.userId, {cartData:{}});{/*borramos los items del carrito del usuario*/}
        const line_items = req.body.items.map((item)=>({
               price_data:{
                 //Moneda en la que se va a pagar
@@ -24,7 +28,7 @@ const placeOrder = async (req, res) => {
                 product_data:{
                      name: item.name,
                 },
-                unit_amount: item.price * 100*3.14,
+                unit_amount: item.price * 100,
               },
               quantity: item.quantity
          }))
@@ -35,7 +39,7 @@ const placeOrder = async (req, res) => {
                  product_data:{
                      name: "Delivery Charges",
                  },
-                 unit_amount: 2*100*3.14,
+                 unit_amount: 2*100,
              },
              quantity: 1,
          })
@@ -44,8 +48,8 @@ const placeOrder = async (req, res) => {
          const session = await stripe.checkout.sessions.create({
             line_items:line_items,
             mode:'payment',
-            success_url: `${frontendUrl}/verify?succes=true&orderId=${newOrder._id}`,
-            cancel_url: `${frontendUrl}/verify?succes=false&orderId=${newOrder._id}`
+            success_url: `${frontendUrl}/verify?success=true&orderId=${newOrder._id}`,
+            cancel_url: `${frontendUrl}/verify?success=false&orderId=${newOrder._id}`
          })
 
          res.json({success:true, session_url: session.url})
@@ -58,7 +62,7 @@ const placeOrder = async (req, res) => {
 const verifyOrder = async (req, res) => {
     const {orderId,success}=req.body;
     try{
-            if(success="true"){
+            if(success=="true"){
                 await orderModel.findByIdAndUpdate(orderId, {payment:true});
                 res.json({success:true, message:"Paid"})
 
