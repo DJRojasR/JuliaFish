@@ -8,10 +8,10 @@ const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("menu");
   const{getTotalCartAmount,token, setToken}=useContext(StoreContext);
   const navigate=useNavigate();
-  const Logout=()=>{
-    localStorage.removeItem
-    setToken("");
-    navigate("/");
+  const Logout = () => {
+    localStorage.removeItem("token"); // Asegúrate de pasar la clave "token"
+    setToken(""); // Limpiar el estado de token en el contexto
+    navigate("/"); // Redirigir al usuario a la página principal
   }
   return (
     //Creamos un div con la clase app y Agregamos el componente Navabar
