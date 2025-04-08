@@ -7,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 //creamos la orden con los datos del usuario
 const placeOrder = async (req, res) => {
 
-    const frontendUrl = "http://localhost:5173"; //URL del frontend
+    const frontendUrl = "http://localhost:5174"; //URL del frontend
     try {
        const newOrder = new orderModel({
            userId: req.body.userId,
@@ -80,6 +80,26 @@ const verifyOrder = async (req, res) => {
     }
 }
 
+//Lista de ordenes del usuario
+const listOrders= async (req,res)=>{
+    try {
+        const orders = await orderModel.find({});//buscamos las ordenes en la base de datos y poblamos el campo userId con el nombre y el email del usuario*/}
+        res.json({success:true, data:orders});  
+    } catch (error) {
+        console.log(error);
+        res.json({success:false, message:"Error al listar las ordenes"})
+    }
+}
+//estado de orden
+const updateStatus = async(req,res)=>{
+    try{
+        await orderModel.findByIdAndUpdate(req.body.orderId,{status:req.body.status}); //actualizamos el estado de la orden
+        res.json({success:true, message:"Estado de la orden actualizado"})
+    }catch(error){
+        console.log(error);
+        res.json({success:false, message:"Error al actualizar el estado de la orden"})
+    }
+}
 
 // user orders for fronted
 
@@ -99,4 +119,4 @@ const userOrders= async (req,res)=>{
 
 
 
-export {placeOrder,verifyOrder,userOrders}; 
+export {placeOrder,verifyOrder,userOrders,listOrders, updateStatus}; 

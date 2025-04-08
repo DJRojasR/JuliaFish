@@ -47,7 +47,7 @@ const MyOrders = () => {
               </p>
               <p>Items: {order.items.length}</p>
               <p><span>&#x25cf;</span><b>{order.status}</b></p>
-              <button>Track over</button>
+              <button onClick={fetchOrders}>Track over</button>
             </div>
           );
         })}

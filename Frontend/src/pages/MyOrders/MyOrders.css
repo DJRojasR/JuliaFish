@@ -41,6 +41,28 @@
   color: #454545;
   
 }
+
+.my-orders-order button {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  background-color:  #81d4fa;
+  cursor: pointer;
+  color: #fbfbfb;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.my-orders-order button:hover {
+  background-color: #6dcef1;
+  transform: scale(1.02);
+}
+
+.my-orders-order button:active {
+  background-color: #99e3f2;
+  transform: scale(0.98);
+}
 @media (max-width: 900px) {
   .my-orders-order{
     grid-template-columns: 1fr 2fr 1fr;
