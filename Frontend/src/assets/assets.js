@@ -268,7 +268,7 @@ export const food_list = [
     image: food_17,
     price: 14,
     description: "Crujientes langostinos fritos acompañados de yuca y salsas criollas.",
-    category: "Chicaharrones"
+    category: "Chicharrones"
   },
   {
     _id:"18",
@@ -276,7 +276,7 @@ export const food_list = [
     image: food_18,
     price: 12,
     description: "Trozos de pota empanizados y fritos, servidos con yuca y salsas criollas.",
-    category: "Chicaharrones"
+    category: "Chicharrones"
   },
   {
     _id:"19",
@@ -284,7 +284,7 @@ export const food_list = [
     image: food_19,
     price: 20,
     description: "Deliciosos trozos de pescado empanizados y fritos, con salsas y acompañamientos.",
-    category: "Chicaharrones"
+    category: "Chicharrones"
   },
   {
     _id:"20",
@@ -292,7 +292,7 @@ export const food_list = [
     image: food_20,
     price: 15,
     description: "Fritura mixta de mariscos, acompañada de salsas y yuca dorada.",
-    category: "Chicaharrones"
+    category: "Chicharrones"
   },
   {
     _id:"21",

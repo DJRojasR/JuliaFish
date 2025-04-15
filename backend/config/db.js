@@ -3,8 +3,6 @@ import mongoose from "mongoose";
 export const connectDB = async () => {
   try {
     await mongoose.connect("mongodb+srv://DJRojasR:Mongodb2025@cluster0.8qqyr.mongodb.net/food-del", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
     });
     console.log("🔥 Conectado a MongoDB");
   } catch (error) {

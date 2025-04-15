@@ -5,11 +5,17 @@
 
 
 // Importamos Express para crear el servidor
+import "dotenv/config"
 import express from "express";
 // Importamos CORS para permitir solicitudes desde diferentes orígenes (necesario para frontend-backend)
 import cors from "cors";
 import { connectDB } from "./config/db.js";
 import foodRoute from "./routes/foodRoute.js";
+import userRouter from "./routes/userRoute.js";
+import cartRouter from "./routes/cartRoute.js";
+import orderRouter from "./routes/orderRoute.js";
+
+
 // Creamos una instancia de la aplicación Express
 const app = express();
 // Definimos el puerto en el que correrá el servidor
@@ -25,9 +31,10 @@ connectDB();
 
 //Api endpoints
 app.use("/api/food", foodRoute);
-
 app.use("/images",express.static("uploads")) //para mostrar las imagenes en uploads
-
+app.use("/api/user", userRouter);
+app.use("/api/cart", cartRouter); // Ruta para el carrito de compras 
+app.use("/api/order", orderRouter); // Ruta para las ordenes 
 
 // Ruta principal: responde con un mensaje cuando se accede a "/"
 app.get("/", (req, res) => {
@@ -45,3 +52,4 @@ app.listen(port, () => {
 
 /**
  */
+//console.log("🔍 JWT_SECRET en server.js:", process.env.JWT_SECRET);

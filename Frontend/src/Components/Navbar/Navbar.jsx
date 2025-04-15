@@ -1,12 +1,18 @@
 import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
-import { Link } from "react-router-dom";
-import { StoreContext } from "../../context/StoreContext";
+import { Link, useNavigate } from "react-router-dom";
+import { StoreContext } from "../../context/StoreContext.jsx";
 //Creanos un componente funcional llamado Navabar y tambien creamos un archivo css llamado Navabar.css
-const Navabar = ({ setShowLogin }) => {
+const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("menu");
-  const{getTotalCartAmount}=useContext(StoreContext);
+  const{getTotalCartAmount,token, setToken}=useContext(StoreContext);
+  const navigate=useNavigate();
+  const Logout = () => {
+    localStorage.removeItem("token"); // Asegúrate de pasar la clave "token"
+    setToken(""); // Limpiar el estado de token en el contexto
+    navigate("/"); // Redirigir al usuario a la página principal
+  }
   return (
     //Creamos un div con la clase app y Agregamos el componente Navabar
     <div className="navbar">
@@ -65,13 +71,24 @@ const Navabar = ({ setShowLogin }) => {
           {/*y un div con la clase dot */}
           <div className={getTotalCartAmount()===0?"":"dot"}></div>
         </div>
-
+        {/* Verificamos si el token existe y si no existe mostramos un boton con el texto sign in */}
+        {!token ? <button onClick={() => setShowLogin(true)}>Sign in</button> : 
+        // Si existe mostramos un div con la clase navbar-profile-agregamos un icono de perfil y un ul con la clase nav-profile-dropdown
+          <div className="navbar-profile">
+            <img src={assets.profile_icon} alt="Profile" />
+            <ul className="nav-profile-dropdown">
+              <li onClick={()=>navigate("/myorders")}><img src={assets.bag_icon} alt="Orders" /><p>Orders</p></li>
+              <hr />
+              <li onClick={Logout}><img src={assets.logout_icon} alt="Logout" /><p>Logout</p></li>
+            </ul>
+          </div>
+        }
           {/* Agregamos un botón con el texto sign in(lo traduce automaticamente a inciar seccion xdxdxd) */}
-          <button onClick={() => setShowLogin(true)}>sign in</button>
+          
      </div>
     </div>
   );
 };
 
-export default Navabar;
+export default Navbar;
 
