@@ -68,9 +68,9 @@ const Orders = ({url}) => {
           <p>Items: {order.items.length}</p>
           <p>Precio Total: {order.amount} PEN</p>
           <select onChange={(e) => statusHandler(e, order._id)} value={order.status} className="order-item-status"> {/* traemos el estado de la orden y creamos un evento que se ejecute al cambiar el estado */}
-                      <option value="Food Processing">Food delivery</option>
-                      <option value="Out for delivery">Out for delivery</option>
-                      <option value="Delivery">Delivery</option>
+                      <option value="Procesando">En proceso</option>
+                      <option value="Pendiente">Pendiente</option>
+                      <option value="Entregado">Entregado</option>
           </select>
           </div>
         ))}
